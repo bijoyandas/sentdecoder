@@ -65,6 +65,8 @@ else if (session.getAttribute("user")!=null){
     <span class="mdl-layout-title">Hi,&nbsp;<%=checkUser==true?user.getFirstname():"Someone" %></span>
      <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
       <a class="mdl-navigation__link" href="Dashboard.jsp" style="font-size:16px;color:white;background-color: #37A1E7"><i class="material-icons">dashboard</i>&nbsp;Dashboard</a>
+      <a class="mdl-navigation__link" style="font-size:16px;color:white" href="Summary.jsp"><i class="material-icons">chrome_reader_mode</i>&nbsp;Summarizer</a>
+      <a class="mdl-navigation__link" style="font-size:16px;color:white" href="Graph.jsp"><i class="material-icons">widgets</i>&nbsp;Graph</a>
       <a class="mdl-navigation__link" href="About.jsp" style="font-size:16px;color:white"><i class="material-icons">person</i>&nbsp;About</a>
       <a class="mdl-navigation__link" href="Guide.jsp" style="font-size:16px;color:white"><i class="material-icons">description</i>&nbsp;Guide</a>
       <a class="mdl-navigation__link" href="Settings.jsp" style="font-size:16px;color:white"><i class="material-icons">settings</i>&nbsp;Settings</a>

@@ -113,6 +113,8 @@ if (session.getAttribute("user")!=null){
     <span class="mdl-layout-title">Hi,&nbsp;<%=checkUser==true?user.getFirstname():"Someone" %></span>
      <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
       <a class="mdl-navigation__link" style="font-size:16px;color:white" href="Dashboard.jsp"><i class="material-icons">dashboard</i>&nbsp;Dashboard</a>
+      <a class="mdl-navigation__link" style="font-size:16px;color:white" href="Summary.jsp"><i class="material-icons">chrome_reader_mode</i>&nbsp;Summarizer</a>
+      <a class="mdl-navigation__link" style="font-size:16px;color:white" href="Graph.jsp"><i class="material-icons">widgets</i>&nbsp;Graph</a>
       <a class="mdl-navigation__link" href="About.jsp" style="font-size:16px;color:white"><i class="material-icons">person</i>&nbsp;About</a>
       <a class="mdl-navigation__link" href="Guide.jsp" style="font-size:16px;color:white"><i class="material-icons">description</i>&nbsp;Guide</a>
       <a class="mdl-navigation__link" href="Settings.jsp" style="font-size:16px;color:white;background-color: #37A1E7"><i class="material-icons">settings</i>&nbsp;Settings</a>
@@ -120,7 +122,7 @@ if (session.getAttribute("user")!=null){
     </nav>
   </div>
       <div class="page-content" style="margin-top:36px">
-	<div class="mdl-grid">
+	<div class="mdl-grid" style="margin-top:10px">
 	  <div class="mdl-cell mdl-cell--8-col" style="text-align:center;margin:auto;box-shadow: 1px 1px 1px 1px #D1D3D5;padding-bottom:35px;border:1px solid #D1D3D5">
 	    <div style="padding-top:35px;text-align:center">
 			<div align="center"><a href="Settings.jsp"><span id="head" style="font-size:32px">Account Settings</span></a></div>

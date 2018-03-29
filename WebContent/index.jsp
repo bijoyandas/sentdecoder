@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Welcome to sentdecoder - The free online tool for brand based predictive analysis</title>
+  <title>Welcome to sentdecoder - The free online predictive analysis engine</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -116,14 +116,14 @@ if (request.getSession().getAttribute("user") != null) {
 <div id="particles-js" style="height:100%;width:100%"></div>
 
 
-<div class="container" style="-moz-box-shadow: 0 0 3px #000;-webkit-box-shadow: 0 0 3px #000;box-shadow: 0 0 3px #000;
+<div class="container" style="-moz-box-shadow: 0 0 3px #000;-webkit-box-shadow: 0 0 3px #000;box-shadow: 0px 0px 3px #000;
 							position:absolute;width:420px;background-color:white;height:260px;text-align:center;
-							margin-top:200px;margin-left:450px;">
+							margin-top:170px;margin-left:450px">
   <p id="message" style="font-family:Verdana;font-size:14px;color:red"></p>
   <div style="padding-top:10px;text-align:center">
 	<div align="center"><a style="text-decoration:none"><span id="head">sent</span><span id="head1">decoder</span></a></div>
   </div><br>
-  <p style="font-family:Verdana;font-size:16px">A live stream sentiment prediction Engine</p>
+  <p style="font-family:Verdana;font-size:16px">A real time predictive analysis Engine</p>
   <br>
   <!-- Model buttons -->
   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#registerModal" style="padding:10px;background-color:#37A1E7;width:210px">Create Account</button><br>
@@ -203,12 +203,12 @@ if (request.getSession().getAttribute("user") != null) {
     </div>
   </div>
   
-  
+
 </div>
+
+
 <!-- scripts -->
 <script src="js/particles.js"></script>
 <script src="js/app.js"></script>
-
-
 </body>
 </html>

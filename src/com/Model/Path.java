@@ -6,6 +6,8 @@ public class Path {
 	public static String streamserver = "/home/bijoyan/workspace/sentdecoder/WebContent/PythonScript/TweepyLoad.py";
 	public static String streamclient = "/home/bijoyan/workspace/sentdecoder/WebContent/PythonScript/StreamClient.py";
 	public static String nonstreamclient = "/home/bijoyan/workspace/sentdecoder/WebContent/PythonScript/nonstream.py";
+	public static String summaryPath = "/home/bijoyan/workspace/sentdecoder/WebContent/PythonScript/summary.py";
+	public static String graphPath = "/home/bijoyan/workspace/sentdecoder/WebContent/PythonScript/graph.py";
 	public static String pythonpath = "/home/bijoyan/anaconda3/bin";
 	public static String javapath = "/home/bijoyan/Documents/Programs/jdk1.8.0_131";
 	public static String condapath = "/home/bijoyan/anaconda3";

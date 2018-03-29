@@ -4,13 +4,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>sentdecoder - About the application</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>sentdecoder - Facebook Graph Analysis</title>
 <link rel="stylesheet" href="css/material.min.css">
+<script src="js/Chart.js"></script>
 <link rel="stylesheet" href="css/style.css">
 <script src="js/material.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<script src="js/graphjs.js"></script>
 </head>
 <body>
 
@@ -34,9 +36,7 @@ if (session.getAttribute("user")!=null){
 	checkUser = true;
 }
 
-
 %>
-
 
 <!-- Simple header with fixed tabs. -->
 <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header
@@ -55,32 +55,41 @@ if (session.getAttribute("user")!=null){
      <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
       <a class="mdl-navigation__link" style="font-size:16px;color:white" href="Dashboard.jsp"><i class="material-icons">dashboard</i>&nbsp;Dashboard</a>
       <a class="mdl-navigation__link" style="font-size:16px;color:white" href="Summary.jsp"><i class="material-icons">chrome_reader_mode</i>&nbsp;Summarizer</a>
-      <a class="mdl-navigation__link" style="font-size:16px;color:white" href="Graph.jsp"><i class="material-icons">widgets</i>&nbsp;Graph</a>
-      <a class="mdl-navigation__link" href="About.jsp" style="font-size:16px;color:white;background-color: #37A1E7"><i class="material-icons">person</i>&nbsp;About</a>
+      <a class="mdl-navigation__link" style="font-size:16px;color:white;background-color: #37A1E7" href="Graph.jsp"><i class="material-icons">widgets</i>&nbsp;Graph</a>
+      <a class="mdl-navigation__link" href="About.jsp" style="font-size:16px;color:white;"><i class="material-icons">person</i>&nbsp;About</a>
       <a class="mdl-navigation__link" href="Guide.jsp" style="font-size:16px;color:white"><i class="material-icons">description</i>&nbsp;Guide</a>
       <a class="mdl-navigation__link" href="Settings.jsp" style="font-size:16px;color:white"><i class="material-icons">settings</i>&nbsp;Settings</a>
       <a class="mdl-navigation__link" href="LogoutServlet" style="font-size:16px;color:white"><i class="material-icons">exit_to_app</i>&nbsp;Logout</a>
     </nav>
   </div>
       <div class="page-content">
-	<div class="mdl-grid" style="margin-top:10px">
-	  <div class="mdl-cell mdl-cell--8-col" style="text-align:center;margin:auto;box-shadow: 1px 1px 1px 1px #D1D3D5;padding-bottom:35px;border:1px solid #D1D3D5">
-	    <div style="padding-top:35px;text-align:center">
-			<div align="center"><a href="About.jsp"><span id="head" style="font-size:32px">About</span></a></div>
+	<div class="mdl-grid">
+	  <div class="mdl-cell mdl-cell--12-col" style="text-align:center;margin:auto;box-shadow: 1px 1px 1px 1px #D1D3D5;padding-bottom:35px;border:1px solid #D1D3D5;margin-top:10px">
+	  	<div style="padding-top:100px;text-align:center">
+			<div align="center"><a><span id="head" style="font-size:50px">Facebook </span><span id="head1" style="font-size:50px">Analysis</span></a></div>
 	    </div>
-		<div style="padding-top:30px;font-size:16px;padding-left:120px;padding-right:120px;text-align:left">
-		sentdecoder is a data analytics web application that will fetch tweets from Twitter based on a 
-		particular topic specially a brand and analyze the commoner's sentiment to predict the popularity 
-		of that brand or any product of that brand. This will help to understand the acceptance of that brand 
-		and to determine strategies for modifying product qualities based on that sentiment.<br><br>sentdecoder
-		uses various graphical representations along with review based on analysis that will help the user 
-		get a better view of the public sentiment and predict more efficiently. Alongside there is provision 
-		for visualizing live stream of data to make better assessment and also country-based analysis to understand 
-		the zonal sentiment. This has developed mainly focusing on the needs of organizations that seek to get a 
-		better view of the market and improve their relationship with their customers.
+		<div id="placement">
+			<form name="search" onsubmit="return false;">
+				<table style="margin:auto"><tr>
+				<td><input  id="brandName" type="text" name="pageName" placeholder="Enter your page name..." onkeypress="return graphEnter(event)"> </td>
+				<td><input  id="brandName" type="text" name="accessToken" placeholder="Enter your access token..." onkeypress="return graphEnter(event)"> </td></tr>
+				<tr><td style="text-align:center;padding-top:20px" colspan=2><input id="buttonStyle" type="button" value="Graph" name='graphAnalyse' onclick="sendGraph()"></td></tr></table>
+			</form>
 		</div>
-	</div></div>
+	  </div>
+	  </div>
+	  <div id="graphData" style="text-align:center;width:100%">
+	  	
+	  </div>
       </div>
 </div>
+
+
+<!--DESIGN OF SNACKBAR STARTS HERE-->
+<div id="error_snackbar" class="mdl-js-snackbar mdl-snackbar">
+  <div style="background-color:#37A1E7;font-size:16px;width:90%" class="mdl-snackbar__text"></div>
+  <button class="mdl-snackbar__action" style="color:white;font-size:14px"></button>
+</div>
+<!--DESIGN OF SNACKBAR ENDS HERE-->
 </body>
 </html>

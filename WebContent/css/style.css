@@ -6,6 +6,26 @@
 	font-size:35px;
 	
 }
+
+.messageTable {
+	text-align:left;
+	border-collapse:collapse;
+	border:2px solid #FFFFFF;
+	width:100%;
+}
+
+.messageTable th {
+	padding:5px;
+	border:2px solid #FFFFFF;
+	background-color:#37A1E7;
+	color:#FFFFFF;
+}
+
+.messageTable td {
+	padding:5px;
+	border:2px solid #FFFFFF;
+}
+
 #brandName{
 	border-style:solid;
 	border-width:2px;

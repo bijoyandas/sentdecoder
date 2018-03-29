@@ -46,7 +46,7 @@ particlesJS('particles-js',
         }
       },
       "size": {
-        "value": 15,
+        "value": 5,
         "random": true,
         "anim": {
           "enable": false,
@@ -56,7 +56,7 @@ particlesJS('particles-js',
         }
       },
       "line_linked": {
-        "enable": true,
+        "enable": false,
         "distance": 150,
         "color": "#37A1E7",
         "opacity": 0.4,
@@ -64,15 +64,15 @@ particlesJS('particles-js',
       },
       "move": {
         "enable": true,
-        "speed": 3,
-        "direction": "none",
+        "speed": 2,
+        "direction": "bottom-right",
         "random": false,
-        "straight": false,
+        "straight": true,
         "out_mode": "out",
         "attract": {
           "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
+          "rotateX": 0,
+          "rotateY": 0
         }
       }
     },
@@ -81,13 +81,13 @@ particlesJS('particles-js',
       "events": {
         "onhover": {
           "enable": false,
-          "mode": "repulse"
+          "mode": "bubble"
         },
         "onclick": {
           "enable": false,
           "mode": "push"
         },
-        "resize": true
+        "resize": false
       },
       "modes": {
         "grab": {
@@ -114,15 +114,7 @@ particlesJS('particles-js',
         }
       }
     },
-    "retina_detect": true,
-    "config_demo": {
-      "hide_card": false,
-      "background_color": "#37A1E7",
-      "background_image": "",
-      "background_position": "50% 50%",
-      "background_repeat": "no-repeat",
-      "background_size": "cover"
-    }
+    "retina_detect": false
   }
 
 );

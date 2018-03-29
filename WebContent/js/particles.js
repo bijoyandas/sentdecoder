@@ -51,7 +51,7 @@ var pJS = function(tag_id, params){
         }
       },
       size: {
-        value: 20,
+        value: 5,
         random: false,
         anim: {
           enable: false,
@@ -61,7 +61,7 @@ var pJS = function(tag_id, params){
         }
       },
       line_linked: {
-        enable: true,
+        enable: false,
         distance: 100,
         color: '#fff',
         opacity: 1,
@@ -72,7 +72,7 @@ var pJS = function(tag_id, params){
         speed: 2,
         direction: 'none',
         random: false,
-        straight: false,
+        straight: true,
         out_mode: 'out',
         bounce: false,
         attract: {
@@ -87,14 +87,14 @@ var pJS = function(tag_id, params){
       detect_on: 'canvas',
       events: {
         onhover: {
-          enable: true,
+          enable: false,
           mode: 'grab'
         },
         onclick: {
-          enable: true,
+          enable: false,
           mode: 'push'
         },
-        resize: true
+        resize: false
       },
       modes: {
         grab:{
